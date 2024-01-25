@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-size: 18px;
@@ -177,9 +178,7 @@ body {
     top: 0;
 }
 
-.carouselimage2{
-    margin-top: 70px;
-}
+
 .back-to-top {
     display: none;
     position: fixed;
@@ -310,18 +309,7 @@ body {
     align-items: left;
     text-align: left;
 }
-.aboutTitle{
-    font-size: 25px;
-   margin-bottom: -20px;
-    color: #06BBCC;
-    
 
-}
-.aboutTagline{
-    font-size: 40px;
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
 .aboutDesc{
     font-size: 15px;
     color: #6f6f6f;
@@ -356,6 +344,8 @@ li{
     justify-content: center;
     align-items: center;
 }
+
+
 .categories{
     margin-top: 100px;
     width: 100%;
@@ -363,81 +353,102 @@ li{
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 20px;
 }
-.categoriesTitle{
+.Title{
     color: #06BBCC;
     font-size: 25px;
+    margin-bottom: -18px;
 
-  margin-bottom: -20px;
+  
 }
-.categoriesTagline{
+.Tagline{
     font-size: 40px;
     font-weight: bolder;
-    margin-bottom: -50px;
+   
 }
 .cats{
-    width: 90%;
-    height: 1000px;
-   display: flex;
+    width: 85%;
+    height: 500px;
+display: flex;
+   
+}
+.rightcat{
+    width: 40%;
+    height: 500px;
+margin-left: 1.5%;
+   
+}
+.leftcat{
+    width: 58.5%;
+    height: 500px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+   
+  
+}
+.leftcattop{
+    width: 100%;
+    height: 48%;
+  
 
 }
-.catsleft{
-    width: 60%;
-    height: 100%;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.catright{
-    width: 40%;
+.leftcatbottom{
     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.catright img{
-    width: 95%;
-    height: 59%;
-    
-}
-.catbottomleft{
+    width: 100%;
+    height: 48%;
     display: flex;
     flex-direction: row;
-    width: 99%;
-    margin-top: 20px;
-
+    justify-content: space-between;
 }
-.catbottomleft img{
-    width: 40%;
-    height: 100%;
-    margin-left:5px ;
+.leftcatbottom1{
     
+    width: 48.8%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
 }
-.TopcatImage{
-   margin-top: 25%;
-   margin-bottom: 25px;
+.leftcatbottom2{
+    
+    width: 48.8%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
 }
-.catsleft img {
-    width: 99%;
-    height: 50%;
+.catImage {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-}
-.catright, .catsleft, .catbottomleft {
-    overflow: hidden;
-}
-
-.catright img, .catsleft img, .catbottomleft img {
     transition: transform 0.3s ease-in-out;
 }
 
-.catright img:hover, .catsleft img:hover, .catbottomleft img:hover {
+.catImage:hover {
     transform: scale(1.1);
 }
-.instructors{
-    margin-top: 600px;
+.leftcattop, .leftcatbottom1, .leftcatbottom2, .rightcat {
+    position: relative;
+    overflow: hidden;
+}
+.image-info {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    background: white;
+    padding: 7px;
+    text-align: center;
+
+}
+.image-info p {
+    margin: 5px;
+   
+}
+.image-info p:first-child {
+    font-weight: bold;
+}
+
+.courses{
+    margin-top: 400px;
     width: 100%;
     height: 600px;
     display: flex;
@@ -445,107 +456,306 @@ li{
     justify-content: center;
     flex-direction: column;
 }
-.instructorstitle{
-    color: #06BBCC;
-    font-size: 25px;
-    margin-bottom: -10px;
-}
-.instructorstagline{
-    font-size: 40px;
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
-.instlist{
+
+.courseslist{
+    
     width: 90%;
-    height: 100%;
+    height: 500px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 100px;
+}
+.course{
+    width: 30%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: rgba(64, 224, 208, 0.16)
+}
+.courseImage{
+    width: 100%;
+    height: 55%;
+   
+    overflow: hidden;
+    position: relative;
    
 }
+.courseImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.courseImage img:hover{
+    transform: scale(1.1);
+}
+.coursebuttons{
+ position: absolute;
+    bottom: 10px;
+    width: 100%;
+   
+    padding: 7px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.coursebuttons div {
+    display: flex;
+    overflow: hidden;
+    border-radius: 70px;
+    
+}
+.coursebuttons p{
+    margin: 0.5px;
+    font-size: 12px;
+    font-weight: bolder;
+    background-color: #06BBCC;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+.coursebuttons p:hover{
+    background-color: #02c2d3;
+    color: white;
+    
+    
+}
+.courseprice{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
-@media only screen and (max-width: 600px) {
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-    }
 
-    .linksdiv {
-        display: none;
-    }
+.rating{
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #6f6f6f;
+    margin-bottom: 20px;
+}
+.rating i{
+    font-size: 16px;
+    color: #06BBCC;
+    
+    
+}
+.instructors{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    body {
-        font-size: 16px;
-    }
+}
+.instructorslist{
+    width: 90%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+}
+.instructor{
+    width: 23.5%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background-color: rgba(64, 224, 208, 0.123)
+}
+.instructorimage{
+    width: 100%;
+    height: 70%;
+    
+    overflow: hidden;
+    position: relative;
+   
+}
+.instructorimage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.instructorimage img:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
     .navbar {
-        display: flex;
-        flex-direction: row;
-        height: 80px;
         
+        
+        position: fixed;
+       justify-content: space-between;
+        width: 100%;
+        transition: transform 0.5s ease-in-out; 
     }
+   
     .navbar a {
         float: none;
-        padding: 10px;
+        display: block;
+        text-align: left;
+        font-size: 0.8em; 
     }
-    .logodiv, .linksdiv {
-        width: 100%;
-    }
-
-
-
-
-    .logodiv, .linksdiv {
-        width: 100%;
-    }
-
-    .slideshow-container {
-        height: 50vh;
-    }
-
-    .mySlides img {
-        height: 50vh;
-    }
-
-    .captions {
-        margin-top: -10%;
-        width: 80vw;
-        
-        left: 50%;
-    }
-
-    .bigtext {
-        font-size: 30px;
-    }
-
-    .navbuttons {
-        top: 150px;
-        right: 10px;
-    }
-
-    .prev, .next {
-        font-size: 14px;
-        padding: 5px;
-        width: 30px;
-    }
-
-  
-
-    .captionsButton1, .captionsButton2 {
-        width: 100px;
-        padding: 10px;
-      
-    }
-
-    .whys {
+    
+    
+    .linksdiv{
+        display: flex;
         flex-direction: column;
-        height: auto;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        
+        display: none;
     }
-
-    .why {
-        width: 80vw;
-        height: 200px;
+   
+    .hamburger {
+        display: block;
+        margin-right: 20px;
+    }
+    .joinbtn{
+        display: none;
+    }
+    
+    .navbar.open {
+        height: 50vh;
+    }
+.bigtext{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 20px;}
+    .whys{
+        flex-direction: column;
+        width: 99%;
+        top: 20px;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+    .why{
+        width: 80%;
+        height: 800px;
         margin-bottom: 20px;
     }
+    .about{
+        margin-top: 400px;
+        flex-direction: column;
+     
+        margin-bottom: 200px;
+        text-align: center;
+        width: 90%;    
+    }
+    .about img{
+        width: 100%;
+        height: 100%;
+    }
+    .aboutButton{
+        margin-left: -20px;
+    }
+    .Title{
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+    }
+    .Tagline{
+        font-size: 25px;
+        font-weight: bolder;
+        width: 100%;
+        text-align: center;
+    }
+    .aboutDesc{
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+        margin-left: -5px;
+    }
+
+    .lists{
+        display:none;
+        
+        
+    }
+    .cats {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .leftcat {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+    }
+    .leftcatbottom {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .leftcatbottom2{
+        width: 100%;
+        height: 100%;
+       background-color: #6f6f6f;
+    }
+    .leftcatbottom1{
+        width: 100%;
+        height: 100%;
+        background-color: #6f6f6f;
+    }
+    .rightcat {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+    .courses{
+        margin-top: 400px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .courseslist{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .course{
+        width: 90%;
+        height: 150%;
+        margin-bottom: 20px;
+    }
+    .instructorslist{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .instructor{
+        width: 90%;
+        height: 150%;
+        margin-bottom: 20px;
+    }
+   
+    
 }

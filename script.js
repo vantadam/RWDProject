@@ -1,4 +1,5 @@
 var slideIndex = 0;
+var slideTimeout;
 
 function showSlides() {
   var i;
@@ -9,10 +10,11 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}    
   slides[slideIndex-1].classList.add("show");
-  setTimeout(showSlides, 5000);
+  slideTimeout = setTimeout(showSlides, 5000);
 }
 
 function prevSlide() {
+  clearTimeout(slideTimeout); 
   var i;
   var slides = document.getElementsByClassName("mySlides");
   for (i = 0; i < slides.length; i++) {
@@ -21,6 +23,7 @@ function prevSlide() {
   slideIndex--;
   if (slideIndex < 1) {slideIndex = slides.length}    
   slides[slideIndex-1].classList.add("show");
+  slideTimeout = setTimeout(showSlides, 5000); 
 }
 
 showSlides();
@@ -58,7 +61,9 @@ var linksdiv = document.getElementsByClassName("linksdiv")[0];
 hamburger.addEventListener("click", function() {
     if (linksdiv.style.display === "none") {
         linksdiv.style.display = "block";
+        navbar.classList.add("open");
     } else {
         linksdiv.style.display = "none";
+        navbar.classList.remove("open");
     }
 });
